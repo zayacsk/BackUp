@@ -1,0 +1,14 @@
+C:\Users\littl\projects\BackUp\BackUp\bin\Debug\net6.0-windows\BackUp.exe
+C:\Users\littl\projects\BackUp\BackUp\bin\Debug\net6.0-windows\BackUp.deps.json
+C:\Users\littl\projects\BackUp\BackUp\bin\Debug\net6.0-windows\BackUp.runtimeconfig.json
+C:\Users\littl\projects\BackUp\BackUp\bin\Debug\net6.0-windows\BackUp.dll
+C:\Users\littl\projects\BackUp\BackUp\bin\Debug\net6.0-windows\BackUp.pdb
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\BackUp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\BackUp.AssemblyInfoInputs.cache
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\BackUp.AssemblyInfo.cs
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\BackUp.csproj.CoreCompileInputs.cache
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\BackUp.dll
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\refint\BackUp.dll
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\BackUp.pdb
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\BackUp.genruntimeconfig.cache
+C:\Users\littl\projects\BackUp\BackUp\obj\Debug\net6.0-windows\ref\BackUp.dll

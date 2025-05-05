@@ -1,0 +1,5 @@
+C:\Users\littl\projects\BackUpFinal\BackUp.exe
+C:\Users\littl\projects\BackUpFinal\BackUp.dll
+C:\Users\littl\projects\BackUpFinal\BackUp.deps.json
+C:\Users\littl\projects\BackUpFinal\BackUp.runtimeconfig.json
+C:\Users\littl\projects\BackUpFinal\BackUp.pdb
