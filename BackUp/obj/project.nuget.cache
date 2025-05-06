@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/gUxRkgyW8I=",
+  "dgSpecHash": "TA3DxWc3H3k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\littl\\projects\\BackUp\\BackUp\\BackUp.csproj",
+  "projectFilePath": "C:\\Users\\Happy\\riderProjects\\BackUp\\BackUp\\BackUp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\littl\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\littl\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\littl\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\littl\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
+    "C:\\Users\\Happy\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\Happy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\Happy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\Happy\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
   ],
   "logs": []
 }

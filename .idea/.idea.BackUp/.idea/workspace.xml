@@ -7,7 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e36e58a4-1d51-414f-bf59-d401ad35c4ea" name="Changes" comment="" />
+    <list default="true" id="e36e58a4-1d51-414f-bf59-d401ad35c4ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackUp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackUp/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackUp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/BackUp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/BackUp.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/BackUp.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/BackUp.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackUp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +29,9 @@
   </component>
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -30,6 +47,8 @@
     "Publish to folder.BackUp.executor": "Run",
     "Publish to folder.BackUpFinal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +98,7 @@
       <workItem from="1746448784008" duration="272000" />
       <workItem from="1746449867104" duration="1988000" />
       <workItem from="1746453429816" duration="6857000" />
+      <workItem from="1746539294014" duration="692000" />
     </task>
     <servers />
   </component>

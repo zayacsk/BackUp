@@ -2,10 +2,6 @@ using Timer = System.Threading.Timer;
 
 namespace BackUp
 {
-    /// <summary>
-    /// Сервис полного бэкапа с очисткой по retention и
-    /// пропуском не изменённых файлов.
-    /// </summary>
     public class BackupService : IDisposable
     {
         private readonly BackupJob _job;
@@ -21,9 +17,6 @@ namespace BackUp
                 throw new ArgumentException("DestinationPath must be set", nameof(job.DestinationPath));
         }
 
-        /// <summary>
-        /// Запускает таймер полного бэкапа.
-        /// </summary>
         public void Start()
         {
             _timer = new Timer(async _ => await RunAsync(_cts.Token),
@@ -32,34 +25,24 @@ namespace BackUp
                                 period:     _job.IntervalMinutes * 60_000);
         }
 
-        /// <summary>
-        /// Останавливает таймер и отменяет текущие задачи.
-        /// </summary>
         public void Stop()
         {
             _cts.Cancel();
             _timer?.Dispose();
         }
 
-        /// <summary>
-        /// Основной метод: очищает старые, затем копирует только изменённые.
-        /// </summary>
         private async Task RunAsync(CancellationToken token)
         {
             try
             {
-                // 1. Очистка старых бэкапов
                 CleanupOldBackups();
 
-                // 2. Определяем, какая папка была последней
                 var lastBackup = GetLatestBackupFolder();
 
-                // 3. Создаём новую папку
                 var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
                 var newFolder = Path.Combine(_job.DestinationPath, $"Backup_{timestamp}");
                 Directory.CreateDirectory(newFolder);
 
-                // 4. Копируем файлы
                 foreach (var srcPath in Directory.GetFiles(_job.SourcePath))
                 {
                     token.ThrowIfCancellationRequested();
@@ -75,7 +58,7 @@ namespace BackUp
                         {
                             var prevWrite = File.GetLastWriteTimeUtc(prevPath);
                             if (prevWrite >= srcWrite)
-                                continue; // Файл не изменился
+                                continue;
                         }
                     }
 
@@ -98,9 +81,6 @@ namespace BackUp
             }
         }
 
-        /// <summary>
-        /// Удаляет папки бэкапов старше retention-дней.
-        /// </summary>
         private void CleanupOldBackups()
         {
             var cutoff = DateTime.UtcNow.AddDays(-_job.RetentionDays);
@@ -120,9 +100,6 @@ namespace BackUp
             }
         }
 
-        /// <summary>
-        /// Возвращает путь к последней (по дате) папке бэкапа.
-        /// </summary>
         private string GetLatestBackupFolder()
         {
             var dirs = Directory.GetDirectories(_job.DestinationPath, "Backup_*");
