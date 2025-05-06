@@ -7,20 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e36e58a4-1d51-414f-bf59-d401ad35c4ea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BackUp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackUp/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="e36e58a4-1d51-414f-bf59-d401ad35c4ea" name="Changes" comment="1.2">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BackUp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BackUp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/BackUp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/BackUp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/BackUp.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/BackUp.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/Debug/net6.0-windows/BackUp.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackUp/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BackUp/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +21,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "zayacsk"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/zayacsk/BackUp.git",
+    "accountId": "4dc57f4d-e7c2-4040-8fff-4752a0b5748d"
+  }
+}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -98,15 +99,27 @@
       <workItem from="1746448784008" duration="272000" />
       <workItem from="1746449867104" duration="1988000" />
       <workItem from="1746453429816" duration="6857000" />
-      <workItem from="1746539294014" duration="692000" />
+      <workItem from="1746539294014" duration="2270000" />
     </task>
+    <task id="LOCAL-00001" summary="1.2">
+      <option name="closed" value="true" />
+      <created>1746553308260</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746553308260</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.2" />
   </component>
 </project>

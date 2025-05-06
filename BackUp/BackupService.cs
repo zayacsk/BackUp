@@ -12,17 +12,17 @@ namespace BackUp
         {
             _job = job ?? throw new ArgumentNullException(nameof(job));
             if (string.IsNullOrWhiteSpace(_job.SourcePath))
-                throw new ArgumentException("SourcePath must be set", nameof(job.SourcePath));
+                throw new ArgumentException("Не указан исходный путь.");
             if (string.IsNullOrWhiteSpace(_job.DestinationPath))
-                throw new ArgumentException("DestinationPath must be set", nameof(job.DestinationPath));
+                throw new ArgumentException("Не указан путь назначения.");
         }
 
         public void Start()
         {
             _timer = new Timer(async _ => await RunAsync(_cts.Token),
-                                null,
-                                dueTime:    0,
-                                period:     _job.IntervalMinutes * 60_000);
+                               null,
+                               dueTime: 0,
+                               period: _job.IntervalMinutes * 60_000);
         }
 
         public void Stop()
@@ -36,24 +36,22 @@ namespace BackUp
             try
             {
                 CleanupOldBackups();
-
                 var lastBackup = GetLatestBackupFolder();
 
-                var timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-                var newFolder = Path.Combine(_job.DestinationPath, $"Backup_{timestamp}");
+                string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                string newFolder = Path.Combine(_job.DestinationPath, $"Backup_{timestamp}");
                 Directory.CreateDirectory(newFolder);
 
                 foreach (var srcPath in Directory.GetFiles(_job.SourcePath))
                 {
                     token.ThrowIfCancellationRequested();
-
-                    var fileName   = Path.GetFileName(srcPath);
-                    var dstPath    = Path.Combine(newFolder, fileName);
-                    var srcWrite   = File.GetLastWriteTimeUtc(srcPath);
+                    string fileName = Path.GetFileName(srcPath);
+                    string dstPath = Path.Combine(newFolder, fileName);
+                    var srcWrite = File.GetLastWriteTimeUtc(srcPath);
 
                     if (lastBackup != null)
                     {
-                        var prevPath  = Path.Combine(lastBackup, fileName);
+                        string prevPath = Path.Combine(lastBackup, fileName);
                         if (File.Exists(prevPath))
                         {
                             var prevWrite = File.GetLastWriteTimeUtc(prevPath);
@@ -62,10 +60,8 @@ namespace BackUp
                         }
                     }
 
-                    await using var src = new FileStream(
-                        srcPath, FileMode.Open, FileAccess.Read, FileShare.Read, 81920, useAsync: true);
-                    await using var dst = new FileStream(
-                        dstPath, FileMode.Create, FileAccess.Write, FileShare.None, 81920, useAsync: true);
+                    await using var src = new FileStream(srcPath, FileMode.Open, FileAccess.Read, FileShare.Read, 81920, useAsync: true);
+                    await using var dst = new FileStream(dstPath, FileMode.Create, FileAccess.Write, FileShare.None, 81920, useAsync: true);
                     await src.CopyToAsync(dst, 81920, token);
                 }
 
@@ -87,12 +83,8 @@ namespace BackUp
             foreach (var dir in Directory.GetDirectories(_job.DestinationPath, "Backup_*"))
             {
                 var name = Path.GetFileName(dir);
-                if (DateTime.TryParseExact(
-                        name.Substring(7),
-                        "yyyyMMdd_HHmmss",
-                        null,
-                        System.Globalization.DateTimeStyles.AssumeUniversal,
-                        out var dt))
+                if (DateTime.TryParseExact(name.Substring(7), "yyyyMMdd_HHmmss", null,
+                    System.Globalization.DateTimeStyles.AssumeUniversal, out var dt))
                 {
                     if (dt.ToUniversalTime() < cutoff)
                         Directory.Delete(dir, recursive: true);
@@ -103,23 +95,18 @@ namespace BackUp
         private string GetLatestBackupFolder()
         {
             var dirs = Directory.GetDirectories(_job.DestinationPath, "Backup_*");
-            return dirs
-                .Select(d => new { Path = d, Time = ParseTimestamp(d) })
-                .Where(x => x.Time != null)
-                .OrderByDescending(x => x.Time)
-                .FirstOrDefault()
-                ?.Path;
+            return dirs.Select(d => new { Path = d, Time = ParseTimestamp(d) })
+                       .Where(x => x.Time != null)
+                       .OrderByDescending(x => x.Time)
+                       .FirstOrDefault()
+                       ?.Path;
         }
 
         private DateTime? ParseTimestamp(string dir)
         {
             var name = Path.GetFileName(dir);
-            if (DateTime.TryParseExact(
-                    name.Substring(7),
-                    "yyyyMMdd_HHmmss",
-                    null,
-                    System.Globalization.DateTimeStyles.AssumeUniversal,
-                    out var dt))
+            if (DateTime.TryParseExact(name.Substring(7), "yyyyMMdd_HHmmss", null,
+                System.Globalization.DateTimeStyles.AssumeUniversal, out var dt))
                 return dt;
             return null;
         }

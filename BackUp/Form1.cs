@@ -1,3 +1,8 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+
 namespace BackUp
 {
     public partial class Form1 : Form
@@ -6,7 +11,6 @@ namespace BackUp
         private TextBox _txtSource, _txtDestination;
         private NumericUpDown _numInterval, _numRetention;
         private Button _btnBrowseSource, _btnBrowseDestination, _btnStart, _btnStop, _btnRestore;
-
         private BackupService _service;
 
         public Form1()
@@ -17,11 +21,9 @@ namespace BackUp
 
         private void InitializeCustomComponents()
         {
-            Text   = "Backup Planner";
-            Width  = 520;
+            Text = "Backup Planner";
+            Width = 520;
             Height = 320;
-
-            new ToolTip { AutoPopDelay = 5000, InitialDelay = 1000, ReshowDelay = 500, ShowAlways = true };
 
             _lblSource = new Label { Text = "Исходная папка:", Left = 20, Top = 20, AutoSize = true };
             Controls.Add(_lblSource);
@@ -83,27 +85,29 @@ namespace BackUp
         {
             var job = new BackupJob
             {
-                SourcePath      = _txtSource.Text,
+                SourcePath = _txtSource.Text,
                 DestinationPath = _txtDestination.Text,
                 IntervalMinutes = (int)_numInterval.Value,
-                RetentionDays   = (int)_numRetention.Value
+                RetentionDays = (int)_numRetention.Value
             };
 
             _service = new BackupService(job);
             _service.Start();
 
-            _lblStatus.Text    = "Статус: Работает";
-            _btnStart.Enabled  = false;
-            _btnStop.Enabled   = true;
+            _lblStatus.Text = "Статус: Работает";
+            _btnStart.Enabled = false;
+            _btnStop.Enabled = true;
+
             MessageBox.Show("Резервное копирование запущено.", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BtnStop_Click(object sender, EventArgs e)
         {
             _service?.Stop();
-            _lblStatus.Text    = "Статус: Остановлен";
-            _btnStart.Enabled  = true;
-            _btnStop.Enabled   = false;
+            _lblStatus.Text = "Статус: Остановлен";
+            _btnStart.Enabled = true;
+            _btnStop.Enabled = false;
+
             MessageBox.Show("Резервное копирование остановлено.", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -133,7 +137,7 @@ namespace BackUp
                 foreach (var srcPath in Directory.GetFiles(selectedBackup))
                 {
                     var fileName = Path.GetFileName(srcPath);
-                    var dstPath  = Path.Combine(_txtSource.Text, fileName);
+                    var dstPath = Path.Combine(_txtSource.Text, fileName);
                     File.Copy(srcPath, dstPath, overwrite: true);
                 }
 
